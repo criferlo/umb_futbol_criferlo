@@ -1,0 +1,39 @@
+<scene export_time="1406565063.584495" previous_export_time="0" formatVersion="1.0.1" exported_by="jpruiz84" >
+  <nodes >
+    <node name="Point" >
+      <position y="1.294903" x="0.535947" z="1.318449" />
+      <rotation qy="0.000000" qz="-0.000000" qw="1.000000" qx="0.000000" />
+      <scale y="1.000000" x="1.000000" z="1.000000" />
+      <game >
+        <sensors />
+        <actuators />
+      </game>
+      <light powerScale="1.0" type="point" name="Point" >
+        <position y="1.294903" x="0.535947" z="1.318449" />
+        <lightAttenuation constant="1.0" linear="0.04" range="5000" quadratic="0.0" />
+        <colourDiffuse g="1.0" b="1.0" r="1.0" />
+        <colourSpecular g="1.0" b="1.0" r="1.0" />
+      </light>
+    </node>
+    <node name="tubo1" >
+      <position y="0.000000" x="0.000000" z="-0.000000" />
+      <rotation qy="0.000000" qz="-0.000000" qw="1.000000" qx="0.000000" />
+      <scale y="1.250000" x="0.035000" z="0.035000" />
+      <game >
+        <sensors />
+        <actuators />
+      </game>
+      <entity lock_trans_z="False" meshFile="tubo1.mesh" lock_trans_y="False" anisotropic_friction="False" lock_rot_y="False" friction_z="1.0" velocity_min="0.0" damping_trans="0.03999999910593033" friction_x="1.0" mass="1.0" inertia_tensor="0.4000000059604645" lock_trans_x="False" ghost="False" physics_type="STATIC" mass_radius="1.0" actor="False" lock_rot_z="False" velocity_max="0.0" name="tubo1" damping_rot="0.10000000149011612" friction_y="1.0" lock_rot_x="False" />
+    </node>
+  </nodes>
+  <externals >
+    <item type="material" >
+      <file name="/home/jpruiz84/Development/jmonkeyplatform/workspace/Game3/assets/Models/tubo1/tubo1.material" />
+    </item>
+  </externals>
+  <environment >
+    <colourBackground g="0.05087608844041824" b="0.05087608844041824" r="0.05087608844041824" />
+    <colourDiffuse g="0.05087608844041824" b="0.05087608844041824" r="0.05087608844041824" />
+    <colourAmbient g="0.0" b="0.0" r="0.0" />
+  </environment>
+</scene>

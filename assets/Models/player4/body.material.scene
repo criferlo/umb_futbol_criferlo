@@ -1,0 +1,217 @@
+<scene exported_by="jpruiz84" formatVersion="1.0.1" previous_export_time="1410986766.3245492" export_time="1410987461.1706288" >
+  <nodes >
+    <node name="player" >
+      <position z="-0.005222" x="0.672952" y="0.464589" />
+      <rotation qz="-0.000000" qw="1.000000" qy="0.000000" qx="0.000000" />
+      <scale z="1.000000" x="1.000000" y="1.000000" />
+      <user_data value="16" type="int" name="MhxVersion" />
+      <user_data value="1.0" type="float" name="MhxScale" />
+      <user_data value="1.0.0" type="str" name="MhVersion" />
+      <user_data value="hm08" type="str" name="MhBaseMesh" />
+      <user_data value="Second_Life_(bones)" type="str" name="MhxRig" />
+      <user_data value="1 16 MhVersion:_1.0.0 MhBaseMesh:_hm08 MhxRig:_Second_Life_(bones) MHXImporter:_1.16.20" type="str" name="MhxVersionStr" />
+      <user_data value="0" type="int" name="MhxShapekeyDrivers" />
+      <user_data value="1" type="int" name="MhAlpha8" />
+      <user_data value="target_rigs/makehuman_tpose.json" type="str" name="McpTPoseFile" />
+      <user_data value="1" type="int" name="McpTPoseLoaded" />
+      <user_data value="0" type="int" name="McpRestTPose" />
+      <game >
+        <sensors />
+        <actuators />
+      </game>
+      <node name="body" >
+        <position z="-0.000000" x="0.000000" y="0.000000" />
+        <rotation qz="-0.000000" qw="1.000000" qy="0.000000" qx="0.000000" />
+        <scale z="1.000000" x="1.000000" y="1.000000" />
+        <user_data value="0.0" type="float" name="MhxOffsetX" />
+        <user_data value="-8.1831" type="float" name="MhxOffsetY" />
+        <user_data value="0.0496" type="float" name="MhxOffsetZ" />
+        <user_data value="1" type="int" name="MhxMesh" />
+        <user_data value="1" type="int" name="MhHuman" />
+        <user_data value="1.0" type="float" name="MhxScale" />
+        <user_data value="caucasian:0.7930_asian:0.1035_african:0.1035_gender:1.0000_age:0.6630_weight:0.6090_muscle:0.6140_height:0.4730_bodyProportions:0.5110_" type="str" name="MhxModel" />
+        <user_data value="1 16 MhVersion:_1.0.0 MhBaseMesh:_hm08 MhxRig:_Second_Life_(bones) MHXImporter:_1.16.20" type="str" name="MhxVersionStr" />
+        <user_data value='&lt;bpy id prop: owner="OBbody", name="cycles_visibility", address=0x7ba9098&gt;' type="IDPropertyGroup" name="cycles_visibility" />
+        <game >
+          <sensors />
+          <actuators />
+        </game>
+        <entity lock_rot_z="False" friction_z="1.0" lock_trans_z="False" lock_rot_y="False" lock_trans_x="False" inertia_tensor="0.4000000059604645" mass="1.0" friction_x="1.0" friction_y="1.0" lock_trans_y="False" damping_rot="0.10000000149011612" damping_trans="0.03999999910593033" lock_rot_x="False" physics_type="STATIC" velocity_min="0.0" ghost="False" meshFile="body.mesh" anisotropic_friction="False" mass_radius="1.0" name="body" velocity_max="0.0" actor="False" >
+          <user_data value='&lt;bpy id prop: owner="MEbody", name="cycles", address=0xa05fc18&gt;' type="IDPropertyGroup" name="cycles" />
+        </entity>
+      </node>
+      <node name="eyebrows" >
+        <position z="-0.000000" x="0.000000" y="0.000000" />
+        <rotation qz="-0.000000" qw="1.000000" qy="0.000000" qx="0.000000" />
+        <scale z="1.000000" x="1.000000" y="1.000000" />
+        <user_data value="1" type="int" name="MhxProxy" />
+        <user_data value="1.0" type="float" name="MhxScale" />
+        <user_data value="Eyebrow001" type="str" name="MhxProxyName" />
+        <user_data value="9c81ec3a-faa5-4c94-9cdb-992300ba3084" type="str" name="MhxProxyUuid" />
+        <user_data value="data/eyebrows/eyebrow001/eyebrow001.mhclo" type="str" name="MhxProxyFile" />
+        <user_data value="Eyebrows" type="str" name="MhxProxyType" />
+        <user_data value="1 16 MhVersion:_1.0.0 MhBaseMesh:_hm08 MhxRig:_Second_Life_(bones) MHXImporter:_1.16.20" type="str" name="MhxVersionStr" />
+        <user_data value='&lt;bpy id prop: owner="OBeyebrows", name="cycles_visibility", address=0x82e5918&gt;' type="IDPropertyGroup" name="cycles_visibility" />
+        <game >
+          <sensors />
+          <actuators />
+        </game>
+        <entity lock_rot_z="False" friction_z="1.0" lock_trans_z="False" lock_rot_y="False" lock_trans_x="False" inertia_tensor="0.4000000059604645" mass="1.0" friction_x="1.0" friction_y="1.0" lock_trans_y="False" damping_rot="0.10000000149011612" damping_trans="0.03999999910593033" lock_rot_x="False" physics_type="STATIC" velocity_min="0.0" ghost="False" meshFile="eyebrows.mesh" anisotropic_friction="False" mass_radius="1.0" name="eyebrows" velocity_max="0.0" actor="False" >
+          <user_data value='&lt;bpy id prop: owner="MEeyebrows", name="cycles", address=0x982d508&gt;' type="IDPropertyGroup" name="cycles" />
+        </entity>
+      </node>
+      <node name="eyes" >
+        <position z="-0.000000" x="0.000000" y="0.000000" />
+        <rotation qz="-0.000000" qw="1.000000" qy="0.000000" qx="0.000000" />
+        <scale z="1.000000" x="1.000000" y="1.000000" />
+        <user_data value="1" type="int" name="MhxProxy" />
+        <user_data value="1.0" type="float" name="MhxScale" />
+        <user_data value="Low-Poly" type="str" name="MhxProxyName" />
+        <user_data value="1cc97a30-85a1-42e6-a9f7-b3e753732baa" type="str" name="MhxProxyUuid" />
+        <user_data value="data/eyes/low-poly/low-poly.mhclo" type="str" name="MhxProxyFile" />
+        <user_data value="Eyes" type="str" name="MhxProxyType" />
+        <user_data value="1 16 MhVersion:_1.0.0 MhBaseMesh:_hm08 MhxRig:_Second_Life_(bones) MHXImporter:_1.16.20" type="str" name="MhxVersionStr" />
+        <user_data value='&lt;bpy id prop: owner="OBeyes", name="cycles_visibility", address=0x6256618&gt;' type="IDPropertyGroup" name="cycles_visibility" />
+        <game >
+          <sensors />
+          <actuators />
+        </game>
+        <entity lock_rot_z="False" friction_z="1.0" lock_trans_z="False" lock_rot_y="False" lock_trans_x="False" inertia_tensor="0.4000000059604645" mass="1.0" friction_x="1.0" friction_y="1.0" lock_trans_y="False" damping_rot="0.10000000149011612" damping_trans="0.03999999910593033" lock_rot_x="False" physics_type="STATIC" velocity_min="0.0" ghost="False" meshFile="eyes.mesh" anisotropic_friction="False" mass_radius="1.0" name="eyes" velocity_max="0.0" actor="False" >
+          <user_data value='&lt;bpy id prop: owner="MEeyes", name="cycles", address=0x9477398&gt;' type="IDPropertyGroup" name="cycles" />
+        </entity>
+      </node>
+      <node name="hair" >
+        <position z="-0.000000" x="0.000000" y="0.000000" />
+        <rotation qz="-0.000000" qw="1.000000" qy="0.000000" qx="0.000000" />
+        <scale z="1.000000" x="1.000000" y="1.000000" />
+        <user_data value="1" type="int" name="MhxProxy" />
+        <user_data value="1.0" type="float" name="MhxScale" />
+        <user_data value="mhair01" type="str" name="MhxProxyName" />
+        <user_data value="710b4c8c-d34e-47a8-9d1d-e3f623bb8d95" type="str" name="MhxProxyUuid" />
+        <user_data value="data/hair/mhair01/mhair01.mhclo" type="str" name="MhxProxyFile" />
+        <user_data value="Hair" type="str" name="MhxProxyType" />
+        <user_data value="1 16 MhVersion:_1.0.0 MhBaseMesh:_hm08 MhxRig:_Second_Life_(bones) MHXImporter:_1.16.20" type="str" name="MhxVersionStr" />
+        <user_data value='&lt;bpy id prop: owner="OBhair", name="cycles_visibility", address=0x625b698&gt;' type="IDPropertyGroup" name="cycles_visibility" />
+        <game >
+          <sensors />
+          <actuators />
+        </game>
+        <entity lock_rot_z="False" friction_z="1.0" lock_trans_z="False" lock_rot_y="False" lock_trans_x="False" inertia_tensor="0.4000000059604645" mass="1.0" friction_x="1.0" friction_y="1.0" lock_trans_y="False" damping_rot="0.10000000149011612" damping_trans="0.03999999910593033" lock_rot_x="False" physics_type="STATIC" velocity_min="0.0" ghost="False" meshFile="hair.mesh" anisotropic_friction="False" mass_radius="1.0" name="hair" velocity_max="0.0" actor="False" >
+          <user_data value='&lt;bpy id prop: owner="MEhair", name="cycles", address=0x8dbec98&gt;' type="IDPropertyGroup" name="cycles" />
+        </entity>
+      </node>
+      <node name="shoes" >
+        <position z="-0.000000" x="0.000000" y="0.000000" />
+        <rotation qz="-0.000000" qw="1.000000" qy="0.000000" qx="0.000000" />
+        <scale z="1.000000" x="1.000000" y="1.000000" />
+        <user_data value="1" type="int" name="MhxProxy" />
+        <user_data value="1.0" type="float" name="MhxScale" />
+        <user_data value="shoes02" type="str" name="MhxProxyName" />
+        <user_data value="8887caca-d6fb-4d73-af10-1d4fb740a936" type="str" name="MhxProxyUuid" />
+        <user_data value="data/clothes/shoes02/shoes02.mhclo" type="str" name="MhxProxyFile" />
+        <user_data value="Clothes" type="str" name="MhxProxyType" />
+        <user_data value="1 16 MhVersion:_1.0.0 MhBaseMesh:_hm08 MhxRig:_Second_Life_(bones) MHXImporter:_1.16.20" type="str" name="MhxVersionStr" />
+        <user_data value='&lt;bpy id prop: owner="OBshoes", name="cycles_visibility", address=0x97a3428&gt;' type="IDPropertyGroup" name="cycles_visibility" />
+        <game >
+          <sensors />
+          <actuators />
+        </game>
+        <entity lock_rot_z="False" friction_z="1.0" lock_trans_z="False" lock_rot_y="False" lock_trans_x="False" inertia_tensor="0.4000000059604645" mass="1.0" friction_x="1.0" friction_y="1.0" lock_trans_y="False" damping_rot="0.10000000149011612" damping_trans="0.03999999910593033" lock_rot_x="False" physics_type="STATIC" velocity_min="0.0" ghost="False" meshFile="shoes.mesh" anisotropic_friction="False" mass_radius="1.0" name="shoes" velocity_max="0.0" actor="False" >
+          <user_data value='&lt;bpy id prop: owner="MEshoes", name="cycles", address=0x77c8d28&gt;' type="IDPropertyGroup" name="cycles" />
+        </entity>
+      </node>
+      <node name="shorts" >
+        <position z="-0.000000" x="0.000000" y="0.000000" />
+        <rotation qz="-0.000000" qw="1.000000" qy="0.000000" qx="0.000000" />
+        <scale z="1.000000" x="1.000000" y="1.000000" />
+        <user_data value="1" type="int" name="MhxProxy" />
+        <user_data value="1.0" type="float" name="MhxScale" />
+        <user_data value="jeans01" type="str" name="MhxProxyName" />
+        <user_data value="faa58a00-05db-4a53-a3a6-72af1cec2053" type="str" name="MhxProxyUuid" />
+        <user_data value="data/clothes/jeans01/jeans01.mhclo" type="str" name="MhxProxyFile" />
+        <user_data value="Clothes" type="str" name="MhxProxyType" />
+        <user_data value="1 16 MhVersion:_1.0.0 MhBaseMesh:_hm08 MhxRig:_Second_Life_(bones) MHXImporter:_1.16.20" type="str" name="MhxVersionStr" />
+        <user_data value='&lt;bpy id prop: owner="OBshorts", name="cycles_visibility", address=0x97a48f8&gt;' type="IDPropertyGroup" name="cycles_visibility" />
+        <game >
+          <sensors />
+          <actuators />
+        </game>
+        <entity lock_rot_z="False" friction_z="1.0" lock_trans_z="False" lock_rot_y="False" lock_trans_x="False" inertia_tensor="0.4000000059604645" mass="1.0" friction_x="1.0" friction_y="1.0" lock_trans_y="False" damping_rot="0.10000000149011612" damping_trans="0.03999999910593033" lock_rot_x="False" physics_type="STATIC" velocity_min="0.0" ghost="False" meshFile="shorts.mesh" anisotropic_friction="False" mass_radius="1.0" name="shorts" velocity_max="0.0" actor="False" >
+          <user_data value='&lt;bpy id prop: owner="MEshorts", name="cycles", address=0x812fda8&gt;' type="IDPropertyGroup" name="cycles" />
+        </entity>
+      </node>
+      <node name="tights" >
+        <position z="-0.000000" x="0.000000" y="0.000000" />
+        <rotation qz="-0.000000" qw="1.000000" qy="0.000000" qx="0.000000" />
+        <scale z="1.000000" x="1.000000" y="1.000000" />
+        <user_data value="0.0" type="float" name="MhxOffsetX" />
+        <user_data value="-8.1831" type="float" name="MhxOffsetY" />
+        <user_data value="0.0496" type="float" name="MhxOffsetZ" />
+        <user_data value="1" type="int" name="MhxMesh" />
+        <user_data value="1" type="int" name="MhHuman" />
+        <user_data value="1.0" type="float" name="MhxScale" />
+        <user_data value="caucasian:0.7930_asian:0.1035_african:0.1035_gender:1.0000_age:0.6630_weight:0.6090_muscle:0.6140_height:0.4730_bodyProportions:0.5110_" type="str" name="MhxModel" />
+        <user_data value="1 16 MhVersion:_1.0.0 MhBaseMesh:_hm08 MhxRig:_Second_Life_(bones) MHXImporter:_1.16.20" type="str" name="MhxVersionStr" />
+        <user_data value='&lt;bpy id prop: owner="OBtights", name="cycles_visibility", address=0x97a5a18&gt;' type="IDPropertyGroup" name="cycles_visibility" />
+        <game >
+          <sensors />
+          <actuators />
+        </game>
+        <entity lock_rot_z="False" friction_z="1.0" lock_trans_z="False" lock_rot_y="False" lock_trans_x="False" inertia_tensor="0.4000000059604645" mass="1.0" friction_x="1.0" friction_y="1.0" lock_trans_y="False" damping_rot="0.10000000149011612" damping_trans="0.03999999910593033" lock_rot_x="False" physics_type="STATIC" velocity_min="0.0" ghost="False" meshFile="tights.mesh" anisotropic_friction="False" mass_radius="1.0" name="tights" velocity_max="0.0" actor="False" >
+          <user_data value='&lt;bpy id prop: owner="MEtights", name="cycles", address=0x9a0fd98&gt;' type="IDPropertyGroup" name="cycles" />
+        </entity>
+      </node>
+      <node name="tshirt" >
+        <position z="-0.000000" x="0.000000" y="0.000000" />
+        <rotation qz="-0.000000" qw="1.000000" qy="0.000000" qx="0.000000" />
+        <scale z="1.000000" x="1.000000" y="1.000000" />
+        <user_data value="1" type="int" name="MhxProxy" />
+        <user_data value="1.0" type="float" name="MhxScale" />
+        <user_data value="tshirt02" type="str" name="MhxProxyName" />
+        <user_data value="1bba9db9-1859-424b-bbff-e3abd48f0fc5" type="str" name="MhxProxyUuid" />
+        <user_data value="data/clothes/tshirt02/tshirt02.mhclo" type="str" name="MhxProxyFile" />
+        <user_data value="Clothes" type="str" name="MhxProxyType" />
+        <user_data value="1 16 MhVersion:_1.0.0 MhBaseMesh:_hm08 MhxRig:_Second_Life_(bones) MHXImporter:_1.16.20" type="str" name="MhxVersionStr" />
+        <user_data value='&lt;bpy id prop: owner="OBtshirt", name="cycles_visibility", address=0x97a7368&gt;' type="IDPropertyGroup" name="cycles_visibility" />
+        <game >
+          <sensors />
+          <actuators />
+        </game>
+        <entity lock_rot_z="False" friction_z="1.0" lock_trans_z="False" lock_rot_y="False" lock_trans_x="False" inertia_tensor="0.4000000059604645" mass="1.0" friction_x="1.0" friction_y="1.0" lock_trans_y="False" damping_rot="0.10000000149011612" damping_trans="0.03999999910593033" lock_rot_x="False" physics_type="STATIC" velocity_min="0.0" ghost="False" meshFile="tshirt.mesh" anisotropic_friction="False" mass_radius="1.0" name="tshirt" velocity_max="0.0" actor="False" >
+          <user_data value='&lt;bpy id prop: owner="MEtshirt", name="cycles", address=0x914a5a8&gt;' type="IDPropertyGroup" name="cycles" />
+        </entity>
+      </node>
+    </node>
+  </nodes>
+  <externals >
+    <item type="material" >
+      <file name="/home/jpruiz84/Dropbox/UMB/Futbol/Modelo3D/modelo_jugador_anim/Ogre/body.material" />
+    </item>
+    <item type="material" >
+      <file name="/home/jpruiz84/Dropbox/UMB/Futbol/Modelo3D/modelo_jugador_anim/Ogre/eyebrows.material" />
+    </item>
+    <item type="material" >
+      <file name="/home/jpruiz84/Dropbox/UMB/Futbol/Modelo3D/modelo_jugador_anim/Ogre/eyes.material" />
+    </item>
+    <item type="material" >
+      <file name="/home/jpruiz84/Dropbox/UMB/Futbol/Modelo3D/modelo_jugador_anim/Ogre/hair.material" />
+    </item>
+    <item type="material" >
+      <file name="/home/jpruiz84/Dropbox/UMB/Futbol/Modelo3D/modelo_jugador_anim/Ogre/shoes.material" />
+    </item>
+    <item type="material" >
+      <file name="/home/jpruiz84/Dropbox/UMB/Futbol/Modelo3D/modelo_jugador_anim/Ogre/shorts.material" />
+    </item>
+    <item type="material" >
+      <file name="/home/jpruiz84/Dropbox/UMB/Futbol/Modelo3D/modelo_jugador_anim/Ogre/tights.material" />
+    </item>
+    <item type="material" >
+      <file name="/home/jpruiz84/Dropbox/UMB/Futbol/Modelo3D/modelo_jugador_anim/Ogre/tshirt.material" />
+    </item>
+  </externals>
+  <environment >
+    <colourDiffuse r="0.05087608844041824" g="0.05087608844041824" b="0.05087608844041824" />
+    <colourAmbient r="0.0" g="0.0" b="0.0" />
+    <colourBackground r="0.05087608844041824" g="0.05087608844041824" b="0.05087608844041824" />
+  </environment>
+</scene>
