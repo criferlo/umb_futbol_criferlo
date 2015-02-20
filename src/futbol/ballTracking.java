@@ -263,6 +263,8 @@ public class ballTracking {
 									obj = (Tipoblanco) tidao.seleccionarUno((long)2);
 								}
 								
+								inte.setTipo_recepcion(FutbolMPanel.getTipoRecepcionSel());
+								
 								inte.setTipoBlanco(obj);
 								
 								inte.setUsuario(usu);

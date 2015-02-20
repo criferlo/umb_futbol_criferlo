@@ -67,7 +67,8 @@ public class FutbolMPanel {
 	public static Usuario getUsuarioSeleccionado() {
 		return usuarioSeleccionado;
 	}
-
+	
+	static JComboBox cmbPega = new JComboBox();
 	// end criferlo
 
 	public static boolean multipleTargetRunning = true;
@@ -595,15 +596,15 @@ public class FutbolMPanel {
 		panel_1.setLayout(null);
 
 		JButton btnIniciar = new JButton("Iniciar");
-		btnIniciar.setBounds(141, 186, 117, 25);
+		btnIniciar.setBounds(349, 186, 117, 25);
 		panel_1.add(btnIniciar);
 
 		JButton btnLanzar = new JButton("Lanzar");
-		btnLanzar.setBounds(12, 186, 117, 25);
+		btnLanzar.setBounds(220, 186, 117, 25);
 		panel_1.add(btnLanzar);
 
 		JButton btnParar = new JButton("Parar");
-		btnParar.setBounds(270, 186, 117, 25);
+		btnParar.setBounds(478, 186, 117, 25);
 		panel_1.add(btnParar);
 
 		JPanel panel = new JPanel();
@@ -855,6 +856,10 @@ public class FutbolMPanel {
 		ButtonGroup group1 = new ButtonGroup();
 		group1.add(rdbtnJugadorVirtual);
 		group1.add(rdbtnTarget);
+		
+		
+		cmbPega.setBounds(12, 186, 193, 24);
+		panel_1.add(cmbPega);
 
 		btnTest.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -952,6 +957,13 @@ public class FutbolMPanel {
 
 		inicializarTablas();
 
+		cmbPega.setEditable(false);
+		cmbPega.addItem("PIE");
+		cmbPega.addItem("MUSLO");
+		cmbPega.addItem("PECHO");
+		
+		
+		
 		// fin by criferlo
 
 	}
@@ -1015,8 +1027,8 @@ public class FutbolMPanel {
 			settings.put("Width", 3072);
 			settings.put("Height", 716);
 
-			settings.put("Width", 3072 / 2);
-			settings.put("Height", 716 / 2);
+			//settings.put("Width", 3072 / 2);
+			//settings.put("Height", 716 / 2);
 
 			settings.put("Title", "Entrenador de fútbol UMB");
 			settings.put("VSync", true);
@@ -1138,4 +1150,11 @@ public class FutbolMPanel {
 	private JTextField txtBuscarCris;
 	private static JTable tblJugadoresCris;
 	private JTextField textField;
+	
+	//criferlo
+	public static String getTipoRecepcionSel(){
+		return cmbPega.getSelectedItem().toString();
+	}
+	
+	//end criferlo
 }
