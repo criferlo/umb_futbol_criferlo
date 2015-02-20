@@ -1,13 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.2.11
+-- version 3.4.10.1deb1
 -- http://www.phpmyadmin.net
 --
--- Servidor: 127.0.0.1
--- Tiempo de generación: 20-02-2015 a las 19:03:01
--- Versión del servidor: 5.6.21
--- Versión de PHP: 5.6.3
+-- Host: localhost
+-- Generation Time: Feb 20, 2015 at 05:28 PM
+-- Server version: 5.5.41
+-- PHP Version: 5.3.10-1ubuntu3.15
 
-SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
 
 
@@ -17,17 +17,17 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8 */;
 
 --
--- Base de datos: `comba`
+-- Database: `comba`
 --
 
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `intento`
+-- Table structure for table `INTENTO`
 --
 
-CREATE TABLE IF NOT EXISTS `intento` (
-`id` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `INTENTO` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `velocidad_blanco` float DEFAULT NULL,
   `tamano_blanco` float DEFAULT NULL,
   `tipoblanco_id` int(11) NOT NULL,
@@ -39,73 +39,93 @@ CREATE TABLE IF NOT EXISTS `intento` (
   `velocidad_disparo` float DEFAULT NULL,
   `tiempo_respuesta` float DEFAULT NULL,
   `usuario_id` int(11) NOT NULL,
-  `fecha_at` datetime DEFAULT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+  `fecha_at` datetime DEFAULT NULL,
+  `tipo_recepcion` varchar(20) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `fk_intento_tipoblanco1_idx` (`tipoblanco_id`),
+  KEY `fk_intento_usuario1_idx` (`usuario_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=16 ;
 
 --
--- Volcado de datos para la tabla `intento`
+-- Dumping data for table `INTENTO`
 --
 
-INSERT INTO `intento` (`id`, `velocidad_blanco`, `tamano_blanco`, `tipoblanco_id`, `velocidad_lanzadera`, `desviacion_lanzadera`, `direccion_lanzadera`, `elevacion_lanzadera`, `precision_disparo`, `velocidad_disparo`, `tiempo_respuesta`, `usuario_id`, `fecha_at`) VALUES
-(1, 4, 50, 1, 2000, 1.2, 3000, 3000, 4, 5, 20, 1, '2015-02-13 00:00:00'),
-(2, 4, 50, 1, 2000, 1.2, 6000, 3000, 4, 5, 20, 1, '2015-02-18 00:00:00'),
-(3, 4, 50, 1, 2000, 1.2, 6000, 3000, 4, 5, 20, 1, '2015-02-19 00:00:00');
+INSERT INTO `INTENTO` (`id`, `velocidad_blanco`, `tamano_blanco`, `tipoblanco_id`, `velocidad_lanzadera`, `desviacion_lanzadera`, `direccion_lanzadera`, `elevacion_lanzadera`, `precision_disparo`, `velocidad_disparo`, `tiempo_respuesta`, `usuario_id`, `fecha_at`, `tipo_recepcion`) VALUES
+(1, 4, 50, 1, 2000, 1.2, 3000, 3000, 4, 5, 20, 1, '2015-02-13 00:00:00', 'PIE'),
+(2, 4, 50, 1, 2000, 1.2, 6000, 3000, 4, 5, 20, 1, '2015-02-18 00:00:00', 'PIE'),
+(3, 4, 50, 1, 2000, 1.2, 6000, 3000, 4, 5, 20, 1, '2015-02-19 00:00:00', 'PIE'),
+(4, 0, 0, 2, NULL, 0, 0, 0, 1.10444, 0, 0, 3, '2015-02-20 00:00:00', 'PIE'),
+(5, 0, 0, 2, NULL, 0, 0, 0, 1.48957, 0, 0, 3, '2015-02-20 00:00:00', 'PIE'),
+(6, 0, 0, 2, NULL, 0, 0, 0, 1.30059, 0, 0, 3, '2015-02-20 00:00:00', 'PIE'),
+(7, 0, 0, 2, NULL, 0, 0, 0, 0.591665, 0, 0, 3, '2015-02-20 00:00:00', 'PIE'),
+(8, 0, 0, 2, NULL, 0, 0, 0, 1.6165, 0, 0, 3, '2015-02-20 00:00:00', 'PIE'),
+(9, 0, 0, 2, NULL, 0, 0, 0, 0.455177, 0, 0, 3, '2015-02-20 00:00:00', 'PIE'),
+(10, 0, 0, 2, NULL, 0, 0, 0, 0.548162, 0, 0, 1, '2015-02-20 00:00:00', 'PIE'),
+(11, 0, 0, 2, NULL, 0, 0, 0, 0.35573, 0, 0, 1, '2015-02-20 00:00:00', 'PIE'),
+(12, 0, 0, 2, NULL, 0, 0, 0, 0.840715, 0, 0, 1, '2015-02-20 00:00:00', 'PIE'),
+(13, 0, 0, 2, NULL, 0, 0, 0, 0.400432, 0, 0, 1, '2015-02-20 00:00:00', 'PECHO'),
+(14, 0, 0, 1, NULL, 0, 0, 0, -7.09135, 0, 0, 1, '2015-02-20 00:00:00', 'MUSLO'),
+(15, 0, 0, 1, NULL, 0, 0, 0, -0.365751, 0, 0, 1, '2015-02-20 00:00:00', 'MUSLO');
 
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tipoblanco`
+-- Table structure for table `TIPOBLANCO`
 --
 
-CREATE TABLE IF NOT EXISTS `tipoblanco` (
-`id` int(11) NOT NULL,
-  `nombre` varchar(45) DEFAULT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+CREATE TABLE IF NOT EXISTS `TIPOBLANCO` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `nombre` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
 
 --
--- Volcado de datos para la tabla `tipoblanco`
+-- Dumping data for table `TIPOBLANCO`
 --
 
-INSERT INTO `tipoblanco` (`id`, `nombre`) VALUES
+INSERT INTO `TIPOBLANCO` (`id`, `nombre`) VALUES
 (1, 'JUGADOR VIRTUAL'),
 (2, 'JUGADOR ALEATORIO');
 
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tipociudad`
+-- Table structure for table `TIPOCIUDAD`
 --
 
-CREATE TABLE IF NOT EXISTS `tipociudad` (
-`id` int(11) NOT NULL,
-  `nombre` varchar(45) DEFAULT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+CREATE TABLE IF NOT EXISTS `TIPOCIUDAD` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `nombre` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
 
 --
--- Volcado de datos para la tabla `tipociudad`
+-- Dumping data for table `TIPOCIUDAD`
 --
 
-INSERT INTO `tipociudad` (`id`, `nombre`) VALUES
+INSERT INTO `TIPOCIUDAD` (`id`, `nombre`) VALUES
 (1, 'SANTA MARTA'),
 (2, 'PASTO');
 
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tipoinstitucion`
+-- Table structure for table `TIPOINSTITUCION`
 --
 
-CREATE TABLE IF NOT EXISTS `tipoinstitucion` (
-`id` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `TIPOINSTITUCION` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `nombre` varchar(45) DEFAULT NULL,
-  `tipociudad_id` int(11) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+  `tipociudad_id` int(11) NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `fk_tipoinstitucion_tipociudad_idx` (`tipociudad_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=6 ;
 
 --
--- Volcado de datos para la tabla `tipoinstitucion`
+-- Dumping data for table `TIPOINSTITUCION`
 --
 
-INSERT INTO `tipoinstitucion` (`id`, `nombre`, `tipociudad_id`) VALUES
+INSERT INTO `TIPOINSTITUCION` (`id`, `nombre`, `tipociudad_id`) VALUES
 (1, 'UNIVERSIDAD MANUELA BELTRAN', 2),
 (2, 'DEPORTIVO PASTO', 2),
 (5, 'DEPOR CALI', 1);
@@ -113,30 +133,31 @@ INSERT INTO `tipoinstitucion` (`id`, `nombre`, `tipociudad_id`) VALUES
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tiposexo`
+-- Table structure for table `TIPOSEXO`
 --
 
-CREATE TABLE IF NOT EXISTS `tiposexo` (
-`id` int(11) NOT NULL,
-  `nombre` varchar(45) DEFAULT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+CREATE TABLE IF NOT EXISTS `TIPOSEXO` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `nombre` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
 
 --
--- Volcado de datos para la tabla `tiposexo`
+-- Dumping data for table `TIPOSEXO`
 --
 
-INSERT INTO `tiposexo` (`id`, `nombre`) VALUES
+INSERT INTO `TIPOSEXO` (`id`, `nombre`) VALUES
 (1, 'MASCULINO'),
 (2, 'FEMENINO');
 
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `usuario`
+-- Table structure for table `USUARIO`
 --
 
-CREATE TABLE IF NOT EXISTS `usuario` (
-`id` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `USUARIO` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `cedula` varchar(45) NOT NULL,
   `nombre_completo` varchar(200) NOT NULL,
   `fecha_nacimiento` datetime NOT NULL,
@@ -144,114 +165,43 @@ CREATE TABLE IF NOT EXISTS `usuario` (
   `peso` int(11) DEFAULT NULL,
   `fecha_registro_at` datetime NOT NULL,
   `tipoinstitucion_id` int(11) NOT NULL,
-  `tiposexo_id` int(11) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+  `tiposexo_id` int(11) NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `fk_usuario_tipoinstitucion1_idx` (`tipoinstitucion_id`),
+  KEY `fk_usuario_tiposexo1_idx` (`tiposexo_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
 
 --
--- Volcado de datos para la tabla `usuario`
+-- Dumping data for table `USUARIO`
 --
 
-INSERT INTO `usuario` (`id`, `cedula`, `nombre_completo`, `fecha_nacimiento`, `estatura`, `peso`, `fecha_registro_at`, `tipoinstitucion_id`, `tiposexo_id`) VALUES
+INSERT INTO `USUARIO` (`id`, `cedula`, `nombre_completo`, `fecha_nacimiento`, `estatura`, `peso`, `fecha_registro_at`, `tipoinstitucion_id`, `tiposexo_id`) VALUES
 (1, '87069371', 'CRISTHIAN FERNANDO LOMBANA', '2015-02-13 00:00:00', 175, 30, '2015-02-13 00:00:00', 1, 1),
 (3, '909090', 'WILLAIAM', '2013-02-14 00:00:00', 142, 76, '2015-02-20 00:00:00', 1, 1);
 
 --
--- Índices para tablas volcadas
+-- Constraints for dumped tables
 --
 
 --
--- Indices de la tabla `intento`
+-- Constraints for table `INTENTO`
 --
-ALTER TABLE `intento`
- ADD PRIMARY KEY (`id`), ADD KEY `fk_intento_tipoblanco1_idx` (`tipoblanco_id`), ADD KEY `fk_intento_usuario1_idx` (`usuario_id`);
+ALTER TABLE `INTENTO`
+  ADD CONSTRAINT `fk_intento_tipoblanco1` FOREIGN KEY (`tipoblanco_id`) REFERENCES `TIPOBLANCO` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  ADD CONSTRAINT `fk_intento_usuario1` FOREIGN KEY (`usuario_id`) REFERENCES `USUARIO` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 --
--- Indices de la tabla `tipoblanco`
+-- Constraints for table `TIPOINSTITUCION`
 --
-ALTER TABLE `tipoblanco`
- ADD PRIMARY KEY (`id`);
+ALTER TABLE `TIPOINSTITUCION`
+  ADD CONSTRAINT `fk_tipoinstitucion_tipociudad` FOREIGN KEY (`tipociudad_id`) REFERENCES `TIPOCIUDAD` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 --
--- Indices de la tabla `tipociudad`
+-- Constraints for table `USUARIO`
 --
-ALTER TABLE `tipociudad`
- ADD PRIMARY KEY (`id`);
-
---
--- Indices de la tabla `tipoinstitucion`
---
-ALTER TABLE `tipoinstitucion`
- ADD PRIMARY KEY (`id`), ADD KEY `fk_tipoinstitucion_tipociudad_idx` (`tipociudad_id`);
-
---
--- Indices de la tabla `tiposexo`
---
-ALTER TABLE `tiposexo`
- ADD PRIMARY KEY (`id`);
-
---
--- Indices de la tabla `usuario`
---
-ALTER TABLE `usuario`
- ADD PRIMARY KEY (`id`), ADD KEY `fk_usuario_tipoinstitucion1_idx` (`tipoinstitucion_id`), ADD KEY `fk_usuario_tiposexo1_idx` (`tiposexo_id`);
-
---
--- AUTO_INCREMENT de las tablas volcadas
---
-
---
--- AUTO_INCREMENT de la tabla `intento`
---
-ALTER TABLE `intento`
-MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
---
--- AUTO_INCREMENT de la tabla `tipoblanco`
---
-ALTER TABLE `tipoblanco`
-MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
---
--- AUTO_INCREMENT de la tabla `tipociudad`
---
-ALTER TABLE `tipociudad`
-MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
---
--- AUTO_INCREMENT de la tabla `tipoinstitucion`
---
-ALTER TABLE `tipoinstitucion`
-MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=6;
---
--- AUTO_INCREMENT de la tabla `tiposexo`
---
-ALTER TABLE `tiposexo`
-MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
---
--- AUTO_INCREMENT de la tabla `usuario`
---
-ALTER TABLE `usuario`
-MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
---
--- Restricciones para tablas volcadas
---
-
---
--- Filtros para la tabla `intento`
---
-ALTER TABLE `intento`
-ADD CONSTRAINT `fk_intento_tipoblanco1` FOREIGN KEY (`tipoblanco_id`) REFERENCES `tipoblanco` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-ADD CONSTRAINT `fk_intento_usuario1` FOREIGN KEY (`usuario_id`) REFERENCES `usuario` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
-
---
--- Filtros para la tabla `tipoinstitucion`
---
-ALTER TABLE `tipoinstitucion`
-ADD CONSTRAINT `fk_tipoinstitucion_tipociudad` FOREIGN KEY (`tipociudad_id`) REFERENCES `tipociudad` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
-
---
--- Filtros para la tabla `usuario`
---
-ALTER TABLE `usuario`
-ADD CONSTRAINT `fk_usuario_tipoinstitucion1` FOREIGN KEY (`tipoinstitucion_id`) REFERENCES `tipoinstitucion` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-ADD CONSTRAINT `fk_usuario_tiposexo1` FOREIGN KEY (`tiposexo_id`) REFERENCES `tiposexo` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+ALTER TABLE `USUARIO`
+  ADD CONSTRAINT `fk_usuario_tipoinstitucion1` FOREIGN KEY (`tipoinstitucion_id`) REFERENCES `TIPOINSTITUCION` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  ADD CONSTRAINT `fk_usuario_tiposexo1` FOREIGN KEY (`tiposexo_id`) REFERENCES `TIPOSEXO` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
